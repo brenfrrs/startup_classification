@@ -151,3 +151,29 @@ For additional info, contact Brendan Ferris or Michael Wirtz at
 [brendanfrrs@gmail.com](mailto:brendanfrrs@gmail.com) and [michaelwirtz88@gmail.com](mailto:michaelwirtz88@gmail.com), respectively
 
 ## Repository Structure
+<pre>
+├── README.md
+├── archive
+│   ├── EDA_large_notebook.ipynb
+│   ├── EDA_notebook.ipynb
+│   ├── cleaning_startup_csv.ipynb
+│   ├── holdout_bf.ipynb
+│   ├── mike_modeling.ipynb
+│   ├── model_bf.ipynb
+│   ├── modeling_master.ipynb
+│   └── visualizations_bf.ipynb
+├── data
+│   ├── cleaned_dummied_startup_data.csv
+│   ├── holdout_startup_data.csv
+│   ├── investments_VC.csv
+│   ├── startup_data.csv
+│   └── training_startup_data.csv
+├── images
+│   ├── external-content.duckduckgo.com.jpg
+│   ├── startup_acquisitions_blue.jpeg
+│   └── startup_acquisitions_red.jpeg
+├── modeling_master.ipynb
+└── pickled_models
+    ├── boost_model_bf_1.pkl
+    ├── scaler_1.pkl
+    └── smote_model_bf_1.pkl</pre>
