@@ -59,7 +59,7 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 <li> <b>days_from_founding_to_funding</b>: the amount of days that passed between the companies founding and when they were first able to secure funding.</li>
 <li> <b>time_between_first_and_last_funding</b>: the amount of days that passed between the first time the company recieved funding and the last time the company recieved funding.</li>
 <li> <b>month_<i>X</i></b>: the month that the company was founded.</li>
-<li> <b>founded_quarter_<i>X</i></b>: the quarter (Q1,Q2,Q3,Q4) that the company was founded.</li>
+<li> <b>founded_quarter_<i>X</i></b>: the quarter (Q2,Q3,Q4) that the company was founded. Q1 was omitted because most companies are founded in January for tax purposes.</li>
 <li> <b>state_code_<i>X</i></b>: the state the company was founded in.</li>
 <li> <b>founded_year_<i>X</i></b>: the year the company was founded.</li>
 <li> <b>url_ending_<i>X</i></b>: the domain name ending of the company website (.com, .org, etc)</li>
