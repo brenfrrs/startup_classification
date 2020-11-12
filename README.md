@@ -1,7 +1,6 @@
 # Predicting Startup Acquisition 
 
-![startup.jpeg](./images/startup_acquisitions_blue.jpeg
-)
+![startup.jpeg](./images/external-content.duckduckgo.com.jpg)
 
 **Authors**: [Brendan Ferris](mailto:brendanfrrs@gmail.com), [Michael Wirtz](mailto:michaelwirtz88@gmail.com)
 
