@@ -101,6 +101,7 @@ Because certain values possess overly predictive power, they were dropped from t
 <li> <b>post_ipo_equity</b>: A post-IPO equity round takes place when firms invest in a company after the company has already gone public.</li>
 <li> <b>post_ipo_debt</b>: A post-IPO debt round takes place when firms loan a company money after the company has already gone public. Similar to debt financing, a company will promise to repay the principal as well as added interest on the debt.                 </li>
 <li> <b>round_C through round_F</b>: companies that that move forward to more advanced stages of funding.</li>
+<li> <b>funding_rounds</b>: the number of funding rounds a company participated in.</li>
 </ol>
 
 </td>
