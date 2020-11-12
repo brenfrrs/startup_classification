@@ -10,10 +10,13 @@ This project analyzes the needs of Butterfly Ventures, a micro VC fund that is l
 
 ## Business Problem
 
+![class_imbalance.jpeg](./images/class_imbalance_graph.png)
+
 Butterfly Ventures is small VC fund that is low on capital. Because of their limited funds, they are looking for a way to better filter companies in the hopes of making the most of their investments. They are aware of the following statistics: 75% of venture-backed startups fail. Under 50% of businesses make it to their fifth year. 33% of startups make it to the 10-year mark. Only 40% of startups actually turn a profit. Given this knowledge, Butterfly Ventures is targeting startups that they believe have the best opportunity at acquisition, a sure-fire way for investment profits. For this purpose, they have hired a group of data scientists to create a model predicting whether or not a startup will be acquired. 
 
+## Data
 
-## Data 
+![category_frequency.jpeg](./images/cat_frequency_graph.png) 
 
 In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kaggle.com/arindam235/startup-investments-crunchbase) to use in our modeling process. The three given classification in the dataset were "closed," "operating," and "acquired."
 
