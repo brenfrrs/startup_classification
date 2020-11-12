@@ -18,47 +18,41 @@ Butterfly Ventures is small VC fund that is low on capital. Because of their lim
 
 In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kaggle.com/arindam235/startup-investments-crunchbase) to use in our modeling process. The three given classification in the dataset were "closed," "operating," and "acquired."
 
-The original 39 columns were as follows:
+<table>
+<tr>
+<th> Features </th>
+</tr>
+<tr>
+<td>
 
-- permalink 
-- name
-- homepage url
-- category list
-- market
-- funding total usd
-- status
-- country code
-- state code
-- region
-- city
-- funding rounds
-- founded at
-- founded month
-- founded quarter
-- founded year
-- frist funding at
-- last funding at
-- seed
-- venture
-- equity crowdfunding
-- undisclosed
-- convertible note
-- debt financing
-- angel
-- grant
-- private equity
-- post ipo equity
-- post ipo debt
-- secondary market
-- product crowdfunding
-- round A
-- round B
-- round C
-- round D
-- round E
-- round F
-- round G
-- round H
+<ul>
+<li> <b>funding_total_usd</b>: how much money did the company raise in total.</li>
+<li> <b>seed</b>: early stage investments meant to support the business until it can generate cash of its own.</li>
+<li> <b>venture</b>: money raised through venture capital.</li>
+<li> <b>equity_crowdfunding</b>: company sold securities in the form of equity.</li>
+<li> <b>undisclosed</b>: mondey raised through undisclosed means.</li>
+<li> convertible_note</li>
+<li> debt_financing</li>
+<li> angel</li>
+<li> grant</li>
+<li>private_equity</li>
+<li>round_A</li>
+<li>round_B</li>
+<li>days_from_founding_to_funding</li>
+<li>time_between_first_and_last_funding</li>
+<li>month_<i>X</i></li>
+<li>founded_quarter_<i>X</i></li>
+<li>state_code_<i>X</i></li>
+<li>founded_year_<i>X</i></li>
+<li>url_ending_<i>X</i></li>
+<li>funding_rounds_<i>X</i></li>
+<li>country_code_USA</li>
+
+</ul>
+
+</td>
+</tr>
+</table>
 
 Because certain values possess overly predictive power, they were dropped from the models. Those columns are as follows: 
 
