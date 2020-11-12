@@ -21,7 +21,6 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 <table>
 <tr>
 <th> Original Features </th>
-<th> Engineered Features </th>
 </tr>
 <tr>
 <td>
@@ -46,6 +45,14 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 </td>
 
 </td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th> Engineered Features </th>
+</tr>
+<tr>
 <td>
 
 <li><b>days_from_founding_to_funding</b>: the amount of days that passed between the companies founding and when they were first able to secure funding.</li>
