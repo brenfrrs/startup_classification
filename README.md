@@ -20,24 +20,34 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 
 <table>
 <tr>
-<th> Features </th>
+<th> Original Features </th>
+<th> Engineered Features </th>
 </tr>
 <tr>
 <td>
 
 <ul>
-<li> <b>funding_total_usd</b>: how much money did the company raise in total.</li>
-<li> <b>seed</b>: early stage investments meant to support the business until it can generate cash of its own.</li>
+<li> <b>funding_total_usd</b>: total amount of money raised by the company.</li>
+<li> <b>seed</b>: Seed rounds are among the first rounds of funding a company will receive, generally while the company is young and working to gain traction. Round sizes range between $10k–$2M, though larger seed rounds have become more common in recent years. A seed round typically comes after an angel round (if applicable) and before a company’s Series A round. </li>
 <li> <b>venture</b>: money raised through venture capital.</li>
-<li> <b>equity_crowdfunding</b>: equity sold via crowdfunding.</li>
+<li> <b>equity_crowdfunding</b>: Equity crowdfunding platforms allow individual users to invest in companies in exchange for equity. Typically on these platforms the investors invest small amounts of money, though syndicates are formed to allow an individual to take a lead on evaluating an investment and pooling funding from a group of individual investors.</li>
 <li> <b>undisclosed</b>: mondey raised through undisclosed means.</li>
-<li> <b>convertible_note</b>: short-term debt that converts into equity</li>
-<li> <b>debt_financing</b>: company raises money by selling debt instruments to investors. Unlike equity financing, this form of financing must be paid back.</li>
-<li> <b>angel</b>: Amount of capital raised by an individual investor in exchange for convertible debt or ownership equity. </li>
-<li> <b>grant</b>: The amount of money raised through grants.</li>
-<li><b>private_equity</b>: funds raised by private-equity firms, venture capital firms, or angel investors.</li>
-<li><b>round_A</b>: the value of the company is usually determined during the initial round of funding.</li>
-<li><b>round_B</b>: funds raised during the second round of funding, after a company has reached certain milestones.</li>
+<li> <b>convertible_note</b>: A convertible note is an ‘in-between’ round funding to help companies hold over until they want to raise their next round of funding. When they raise the next round, this note ‘converts’ with a discount at the price of the new round. You will typically see convertible notes after a company raises, for example, a Series A round but does not yet want to raise a Series B round.</li>
+<li> <b>debt_financing</b>: In a debt round, an investor lends money to a company, and the company promises to repay the debt with added interest.</li>
+<li> <b>angel</b>: An angel round is typically a small round designed to get a new company off the ground. Investors in an angel round include individual angel investors, angel investor groups, friends, and family. </li>
+<li> <b>grant</b>: A grant is when a company, investor, or government agency provides capital to a company without taking an equity stake in the company.</li>
+<li><b>private_equity</b>: A private equity round is led by a private equity firm or a hedge fund and is a late stage round. It is a less risky investment because the company is more firmly established, and the rounds are typically upwards of $50M</li>
+<li><b>round_A</b>: funding round for earlier stage companies and range on average between $1M–$30M. The value of the company is usually determined during the initial round of funding.</li>
+<li><b>round_B</b>: funding round for earlier stage companies and range on average between $1M–$30M.</li>
+<li><b>product_crowdfunding</b>: In a product crowdfunding round, a company will provide its product, which is often still in development, in exchange for capital. This kind of round is also typically completed on a funding platform.</li>
+
+</ul>
+
+</td>
+
+</td>
+<td>
+
 <li><b>days_from_founding_to_funding</b>: the amount of days that passed between the companies founding and when they were first able to secure funding.</li>
 <li><b>time_between_first_and_last_funding</b>: the amount of days that passed between the first time the company recieved funding and the last time the company recieved funding.</li>
 <li><b>month_<i>X</i></b>: the month that the company was founded. </li>
@@ -45,10 +55,8 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 <li><b>state_code_<i>X</i></b>: the state the company was founded in.</li>
 <li><b>founded_year_<i>X</i></b>: the year the company was founded.</li>
 <li><b>url_ending_<i>X</i></b>: the domain name ending of the company website (.com, .org, etc)</li>
-<li>funding_rounds_<i>X</i></li>
 <li><b>country_code_USA</b>: if the company was founded in the USA.</li>
 
-</ul>
 
 </td>
 </tr>
@@ -72,14 +80,23 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 
 Because certain values possess overly predictive power, they were dropped from the models. Those columns are as follows: 
 
-- post ipo equity
-- post ipo debt
-- round C
-- round D
-- round E
-- round F
-- round G
-- round H
+
+<table>
+<tr>
+<th> Removed From Original Dataset </th>
+</tr>
+<tr>
+<td>
+
+<ol>
+<li> <b>post_ipo_equity</b>: A post-IPO equity round takes place when firms invest in a company after the company has already gone public.</li>
+<li> <b>post_ipo_debt</b>: A post-IPO debt round takes place when firms loan a company money after the company has already gone public. Similar to debt financing, a company will promise to repay the principal as well as added interest on the debt.                 </li>
+<li> <b>round_C through round_F</b>: companies that that move forward to more advanced stages of funding.</li>
+</ol>
+
+</td>
+</tr>
+</table>
 
 ## Methods
 
