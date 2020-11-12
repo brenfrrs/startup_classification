@@ -79,7 +79,7 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 <td>
 
 <ul>
-<li> <b>acquired (1)</b>: companied that were acquired.</li>
+<li> <b>acquired (1)</b>: companies that were acquired.</li>
 <li> <b>not acquired (0)</b>: companies that have either closed or are still operating.</li>
 </ul>
 
