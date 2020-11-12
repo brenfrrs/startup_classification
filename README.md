@@ -29,25 +29,41 @@ In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kagg
 <li> <b>funding_total_usd</b>: how much money did the company raise in total.</li>
 <li> <b>seed</b>: early stage investments meant to support the business until it can generate cash of its own.</li>
 <li> <b>venture</b>: money raised through venture capital.</li>
-<li> <b>equity_crowdfunding</b>: company sold securities in the form of equity.</li>
+<li> <b>equity_crowdfunding</b>: equity sold via crowdfunding.</li>
 <li> <b>undisclosed</b>: mondey raised through undisclosed means.</li>
-<li> convertible_note</li>
-<li> debt_financing</li>
-<li> angel</li>
-<li> grant</li>
-<li>private_equity</li>
-<li>round_A</li>
-<li>round_B</li>
-<li>days_from_founding_to_funding</li>
-<li>time_between_first_and_last_funding</li>
-<li>month_<i>X</i></li>
-<li>founded_quarter_<i>X</i></li>
-<li>state_code_<i>X</i></li>
-<li>founded_year_<i>X</i></li>
-<li>url_ending_<i>X</i></li>
+<li> <b>convertible_note</b>: short-term debt that converts into equity</li>
+<li> <b>debt_financing</b>: company raises money by selling debt instruments to investors. Unlike equity financing, this form of financing must be paid back.</li>
+<li> <b>angel</b>: Amount of capital raised by an individual investor in exchange for convertible debt or ownership equity. </li>
+<li> <b>grant</b>: The amount of money raised through grants.</li>
+<li><b>private_equity</b>: funds raised by private-equity firms, venture capital firms, or angel investors.</li>
+<li><b>round_A</b>: the value of the company is usually determined during the initial round of funding.</li>
+<li><b>round_B</b>: funds raised during the second round of funding, after a company has reached certain milestones.</li>
+<li><b>days_from_founding_to_funding</b>: the amount of days that passed between the companies founding and when they were first able to secure funding.</li>
+<li><b>time_between_first_and_last_funding</b>: the amount of days that passed between the first time the company recieved funding and the last time the company recieved funding.</li>
+<li><b>month_<i>X</i></b>: the month that the company was founded. </li>
+<li><b>founded_quarter_<i>X</i></b>: the quarter (Q1,Q2,Q3,Q4) that the company was founded.</li>
+<li><b>state_code_<i>X</i></b>: the state the company was founded in.</li>
+<li><b>founded_year_<i>X</i></b>: the year the company was founded.</li>
+<li><b>url_ending_<i>X</i></b>: the domain name ending of the company website (.com, .org, etc)</li>
 <li>funding_rounds_<i>X</i></li>
-<li>country_code_USA</li>
+<li><b>country_code_USA</b>: if the company was founded in the USA.</li>
 
+</ul>
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th> Target </th>
+</tr>
+<tr>
+<td>
+
+<ul>
+<li> <b>acquired (1)</b>: was the company acquired.</li>
+<li> <b>not acquired (0)</b>: companies that have either closed or are still operating.                 </li>
 </ul>
 
 </td>
