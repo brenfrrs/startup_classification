@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project analyzes the needs of Butterfly Ventures, a micro VC fund that is seeking to leverage a machine learning model that will precisely classify companies that will be acquired. In an effort to model this problem, we collected a dataset of startups that fell into any one of the following three categories: closed, operating or acquired. In an effort to minimize the false negatives, we chose precision to be our target metric. Our baseline model using Logistic Regression had a precision score of 0.1. Our final and best model was a Random Forest model that had a precision score of 0.33. 
+This project analyzes the needs of Butterfly Ventures, a micro VC fund that is seeking to leverage a machine learning model that will precisely classify companies that will be acquired. In an effort to model this problem, we collected a dataset of startups that fell into any one of the following three categories: closed, operating or acquired. In an effort to minimize the false negatives, we chose precision to be our target metric. Our baseline model using Logistic Regression had a precision score ranging from 13-30%, exhibiting low predictive power. Our final and best model was a Random Forest model that had a precision score 28%. 
 
 ## Business Problem
 
@@ -14,8 +14,6 @@ Butterfly Ventures is small VC fund that is low on capital. Because of their lim
 
 ## Data
 ![category_frequency.jpeg](./images/funding.png) 
-----
-![category_frequency.jpeg](./images/cat_frequency_graph.png) 
 
 In order to help Butterfly Ventures, we used a [Kaggle dataset](https://www.kaggle.com/arindam235/startup-investments-crunchbase) with information on 54,000 companies sourced from crunchbase to train our model. The three original classification in the dataset were "closed," "operating," and "acquired."; however, we grouped operating and closed into one category (not acquired) in order to predict the "acquried" class. The feature definitions for the dataset can be found below, or on the [crunchbase website](https://support.crunchbase.com/hc/en-us/articles/115010458467-Glossary-of-Funding-Types).
 
@@ -111,42 +109,41 @@ Because certain values possessed overly predictive power, they were dropped from
 
 ## Methods
 
-![class_imbalance.jpeg](./images/class_imbalance_graph.png)
+![category_frequency.jpeg](./images/cat_frequency_graph.png) 
 
 Overall, this project analyzes the given dataset information to maximize the precision metric of our models. 
 
 In order to get the most out of our features, we dummied all of the categorical columns. We presumed that the category list column would be the most beneficial to our model, given that it would be able to classify each startup specifically into business-type categories. 
 
-Because there was high class imbalance, we implemented upsampling and downsampling techniques to balance out the acquired (1) and not acquired(0) classes.
+Because there was high class imbalance, we implemented a mixture of upsampling and downsampling techniques to balance out the acquired (1) and not acquired(0) classes.
 
-For our logistic regression models, large continuous variables presented issues with training time and performance of our model, so we standardized the continuous features in order to deal with this issue.
+For our logistic regression models, large continuous variables presented issues with training time and performance of our model, so we standardized the continuous features in order to deal with this issue. 
+
+We ran through multiple iterations of both logistic regression and random forest models in order to maximize the percision score.
 
 ## Results
 
-Our results were two-fold: 
-
-First, we trained our models and predicted on the test set. Because our test set was balanced, we received some pretty impressive results. Our models showed precision scores close to 0.9. 
-
-Second, we predicted on the holdout set. The results here were vastly different. We beleive that this is because the class imbalance was just so high. Due to this fact, our precision score fell dramatically below 0.5, with our best model having a precision score on the holdout set of 0.32. 
+Our random forest model yielded the best precision results at 28%. Although at first, logistic regression models produced high numbers on precision, values would fluctuate leading to low predictive power. 
 
 ## Conclusion
 
 The conclusions that can be drawn given our results include:
 
 - Predicting  whether a company would be acquired is a complex problem, and expanded data collection would greatly benefit the precision of the model.
-- There are only small tangible differences that make the difference between an acquired startup and a startup that is not acquired
+- A combination of Up/Downsampling drastically reduced false positives, while preserving precision.
+- Random Forest models yielded the highest precision figures.
 
 
 ### Next Steps
 
 - If Butterfly Ventures does not have the resources to collect more data, it may be beneficial to pivot into developing a more interpretable model, then drawing insights from it to guide investment decisions.
 - Scrape data on startup management to get an indication of how that can effect acquisition 
-- Overall: get more data! 
+- Predicting  whether a company would be acquired is a complex problem, and expanded data collection would greatly benefit the precision of the model.
 
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./code_success_movie.ipynb) or review this [presentation](./slides_successful_movie.pdf).
+See the full modeling process in the [modeling notebook](./archive/modeling_notebook.ipynb) or review this [presentation](./slide_deck.pdf).
 
 For additional info, contact Brendan Ferris or Michael Wirtz at
 [brendanfrrs@gmail.com](mailto:brendanfrrs@gmail.com) and [michaelwirtz88@gmail.com](mailto:michaelwirtz88@gmail.com), respectively.
@@ -155,26 +152,17 @@ For additional info, contact Brendan Ferris or Michael Wirtz at
 <pre>
 ├── README.md
 ├── archive
-│   ├── EDA_large_notebook.ipynb
 │   ├── EDA_notebook.ipynb
-│   ├── cleaning_startup_csv.ipynb
-│   ├── holdout_bf.ipynb
-│   ├── mike_modeling.ipynb
-│   ├── model_bf.ipynb
-│   ├── modeling_master.ipynb
-│   └── visualizations_bf.ipynb
+│   ├── cleaning_notebook.ipynb
+│   └── modeling_notebook.ipynb
 ├── data
-│   ├── cleaned_dummied_startup_data.csv
-│   ├── holdout_startup_data.csv
-│   ├── investments_VC.csv
-│   ├── startup_data.csv
-│   └── training_startup_data.csv
+│   ├── cleaned_investments_VC.csv
+│   └── investments_VC.csv
 ├── images
+│   ├── cat_frequency_graph.png
+│   ├── class_imbalance_graph.png
 │   ├── external-content.duckduckgo.com.jpg
+│   ├── funding.png
 │   ├── startup_acquisitions_blue.jpeg
 │   └── startup_acquisitions_red.jpeg
-├── modeling_master.ipynb
-└── pickled_models
-    ├── boost_model_bf_1.pkl
-    ├── scaler_1.pkl
-    └── smote_model_bf_1.pkl</pre>
+└── slide_deck.pdf</pre>
