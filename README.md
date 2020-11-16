@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project analyzes the needs of Butterfly Ventures, a micro VC fund that is seeking to leverage a machine learning model that will precisely classify companies that will be acquired. In an effort to model this problem, we collected a dataset of startups that fell into any one of the following three categories: closed, operating or acquired. In an effort to minimize the false negatives, we chose precision to be our target metric. Our baseline model using Logistic Regression had a precision score ranging from 13-30%, exhibiting low predictive power. Our final and best model was a Random Forest model that had a precision score 28%. 
+This project analyzes the needs of Butterfly Ventures, a micro venture capital fund that is seeking to leverage a machine learning model that will precisely classify companies that will be acquired. In an effort to model this problem, we collected a dataset of startups that fell into any one of the following three categories: closed, operating or acquired. In an effort to minimize the false negatives, we chose precision to be our target metric. Our baseline model using Logistic Regression had a precision score ranging from 13-30%, exhibiting low predictive power. Our final and best model was a Random Forest model that had a precision score 28%. 
 
 ## Business Problem
 
